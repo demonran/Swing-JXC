@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.Spinfo" table="tb_spinfo"  catalog="jxcDB">
+        <id name="id" type="string">
+            <column name="ID" />
+        </id>
+        <property name="spname" type="string"  >
+            <column name="SPNAME" length="50"  />
+        </property>
+        <property name="jc" type="string">
+            <column name="JC"  />
+        </property>
+         <property name="cd" type="string">
+            <column name="CD" />
+        </property>
+         <property name="dw" type="string">
+            <column name="DW"  />
+        </property>
+         <property name="gg" type="string">
+            <column name="GG" />
+        </property>
+          <property name="bz" type="string">
+            <column name="BZ" />
+        </property>
+        <property name="ph" type="string">
+            <column name="PH" />
+        </property>
+        <property name="pzwh" type="string">
+            <column name="PZWH" />
+        </property>
+        <property name="memo" type="string">
+            <column name="MEMO" />
+        </property>
+        <property name="gysname" type="string">
+            <column name="GYSNAME" />
+        </property>
+    </class>
+</hibernate-mapping>
+

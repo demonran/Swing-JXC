@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.RukuMain" table="tb_ruku_main"  catalog="jxcDB">
+        <id name="rkId" type="string">
+            <column name="RKID" />
+        </id>
+        <property name="pzs" type="string"  >
+            <column name="PZS" length="50"  />
+        </property>
+        <property name="je" type="string">
+            <column name="JE"  />
+        </property>
+         <property name="ysjl" type="string">
+            <column name="YSJL" />
+        </property>
+         <property name="gysname" type="string">
+            <column name="GYSNAME"  />
+        </property>
+         <property name="rkdate" type="string">
+            <column name="RKDATE" />
+        </property>
+          <property name="czy" type="string">
+            <column name="CZY" />
+        </property>
+        <property name="jsr" type="string">
+            <column name="JSR" />
+        </property>
+        <property name="jsfs" type="string">
+            <column name="JSFS" />
+        </property>
+        <!-- 采用一对多关系加载相关的Service记录 -->
+        <set name="rukuDetails"  cascade="all">
+            <key>
+            <!-- 指定关联条件字段，写外键字段 -->
+                <column name="RKID" />
+            </key>
+            
+            <!-- 指定要采用的关系，要加载的数据类型 -->
+            <one-to-many class="model.RukuDetail"  />
+        </set>
+    </class>
+</hibernate-mapping>
+

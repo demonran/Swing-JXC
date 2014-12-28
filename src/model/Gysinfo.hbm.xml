@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.Gysinfo" table="tb_gysinfo"  catalog="jxcDB">
+        <id name="id" type="string">
+            <column name="ID" />
+        </id>
+        <property name="name" type="string"  >
+            <column name="NAME" length="50"  />
+        </property>
+       
+        <property name="jc" type="string">
+            <column name="JC"  />
+        </property>
+         <property name="address" type="string">
+            <column name="ADDRESS" />
+        </property>
+         <property name="tel" type="string">
+            <column name="TEL"  />
+        </property>
+         <property name="email" type="string">
+            <column name="EMAIL" />
+        </property>
+          <property name="lian" type="string">
+            <column name="LIAN" />
+        </property>
+        <property name="ltel" type="string">
+            <column name="LTEL" />
+        </property>
+        <property name="bianma" type="string">
+            <column name="BIANMA" />
+        </property>
+        <property name="fax" type="string">
+            <column name="FAX" />
+        </property>
+        <property name="yh" type="string">
+            <column name="YH" />
+        </property>
+    </class>
+</hibernate-mapping>
+

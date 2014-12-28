@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="model.RukuDetail" table="tb_ruku_detail"  catalog="jxcDB">
+ 
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+             <generator class="identity"></generator>
+        </id>
+        <property name="rkId" type="string"  >
+            <column name="RKID" length="50"  />
+        </property>
+        <property name="spId" type="string">
+            <column name="SPID"  />
+        </property>
+         <property name="dj" type="double">
+            <column name="DJ" />
+        </property>
+         <property name="sl" type="integer">
+            <column name="SL"  />
+        </property>
+        
+    </class>
+</hibernate-mapping>
+
